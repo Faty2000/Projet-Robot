@@ -1,0 +1,171 @@
+13:56:23 **** Incremental Build of configuration Debug for project Robot3_F103RB_origin ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F103xB -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:242:35: warning: passing argument 2 of 'HAL_UART_Receive_IT' from incompatible pointer type [-Wincompatible-pointer-types]
+  242 |      HAL_UART_Receive_IT(&huart1, Xbee_RX,8); // 8bytes, Xbee sur uart1
+      |                                   ^~~~~~~
+      |                                   |
+      |                                   uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:337,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:703:75: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  703 | HAL_StatusTypeDef HAL_UART_Receive_IT(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size);
+      |                                                                  ~~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'Gestion_Commandes':
+../Core/Src/main.c:341:5: warning: enumeration value 'PARK' not handled in switch [-Wswitch]
+  341 |     switch (Etat) {
+      |     ^~~~~~
+../Core/Src/main.c:406:5: warning: enumeration value 'PARK' not handled in switch [-Wswitch]
+  406 |     switch (Etat) {
+      |     ^~~~~~
+../Core/Src/main.c:471:5: warning: enumeration value 'PARK' not handled in switch [-Wswitch]
+  471 |     switch (Etat) {
+      |     ^~~~~~
+../Core/Src/main.c:536:5: warning: enumeration value 'PARK' not handled in switch [-Wswitch]
+  536 |     switch (Etat) {
+      |     ^~~~~~
+../Core/Src/main.c:602:5: warning: enumeration value 'AV1' not handled in switch [-Wswitch]
+  602 |     switch (Etat) {
+      |     ^~~~~~
+../Core/Src/main.c:602:5: warning: enumeration value 'AV2' not handled in switch [-Wswitch]
+../Core/Src/main.c:602:5: warning: enumeration value 'AV3' not handled in switch [-Wswitch]
+../Core/Src/main.c:602:5: warning: enumeration value 'RV1' not handled in switch [-Wswitch]
+../Core/Src/main.c:602:5: warning: enumeration value 'RV2' not handled in switch [-Wswitch]
+../Core/Src/main.c:602:5: warning: enumeration value 'RV3' not handled in switch [-Wswitch]
+../Core/Src/main.c:602:5: warning: enumeration value 'DV1' not handled in switch [-Wswitch]
+../Core/Src/main.c:602:5: warning: enumeration value 'DV2' not handled in switch [-Wswitch]
+../Core/Src/main.c:602:5: warning: enumeration value 'DV3' not handled in switch [-Wswitch]
+../Core/Src/main.c:602:5: warning: enumeration value 'GV1' not handled in switch [-Wswitch]
+../Core/Src/main.c:602:5: warning: enumeration value 'GV2' not handled in switch [-Wswitch]
+../Core/Src/main.c:602:5: warning: enumeration value 'GV3' not handled in switch [-Wswitch]
+../Core/Src/main.c:602:5: warning: enumeration value 'PARK' not handled in switch [-Wswitch]
+../Core/Src/main.c:602:5: warning: enumeration value 'Att_PARK' not handled in switch [-Wswitch]
+../Core/Src/main.c:616:5: warning: enumeration value 'AV1' not handled in switch [-Wswitch]
+  616 |     switch (Etat) {
+      |     ^~~~~~
+../Core/Src/main.c:616:5: warning: enumeration value 'AV2' not handled in switch [-Wswitch]
+../Core/Src/main.c:616:5: warning: enumeration value 'AV3' not handled in switch [-Wswitch]
+../Core/Src/main.c:616:5: warning: enumeration value 'RV1' not handled in switch [-Wswitch]
+../Core/Src/main.c:616:5: warning: enumeration value 'RV2' not handled in switch [-Wswitch]
+../Core/Src/main.c:616:5: warning: enumeration value 'RV3' not handled in switch [-Wswitch]
+../Core/Src/main.c:616:5: warning: enumeration value 'DV1' not handled in switch [-Wswitch]
+../Core/Src/main.c:616:5: warning: enumeration value 'DV2' not handled in switch [-Wswitch]
+../Core/Src/main.c:616:5: warning: enumeration value 'DV3' not handled in switch [-Wswitch]
+../Core/Src/main.c:616:5: warning: enumeration value 'GV1' not handled in switch [-Wswitch]
+../Core/Src/main.c:616:5: warning: enumeration value 'GV2' not handled in switch [-Wswitch]
+../Core/Src/main.c:616:5: warning: enumeration value 'GV3' not handled in switch [-Wswitch]
+../Core/Src/main.c:616:5: warning: enumeration value 'PARK' not handled in switch [-Wswitch]
+../Core/Src/main.c:616:5: warning: enumeration value 'Att_PARK' not handled in switch [-Wswitch]
+../Core/Src/main.c: In function 'ACS':
+../Core/Src/main.c:655:14: warning: comparison between 'volatile enum MODE' and 'enum ETAT' [-Wenum-compare]
+  655 |    if ( Mode == ACTIF || Mode == Park || Mode == Att_Park ) // on a ajouté Park et att_park
+      |              ^~
+../Core/Src/main.c: In function 'regulateur':
+../Core/Src/main.c:745:12: warning: comparison between 'volatile enum MODE' and 'enum ETAT' [-Wenum-compare]
+  745 |   if (Mode == ACTIF || Mode== Park || Mode== Att_Park)
+      |            ^~
+../Core/Src/main.c: In function 'Pilotage_Auto':
+../Core/Src/main.c:837:5: warning: enumeration value 'SLEEP' not handled in switch [-Wswitch]
+  837 |     switch (Mode){
+      |     ^~~~~~
+../Core/Src/main.c:837:5: warning: enumeration value 'ACTIF' not handled in switch [-Wswitch]
+../Core/Src/main.c:854:5: warning: enumeration value 'EnvoyerCoord' not handled in switch [-Wswitch]
+  854 |     switch (Sous_Etat){
+      |     ^~~~~~
+../Core/Src/main.c:854:5: warning: enumeration value 'AttenteAck' not handled in switch [-Wswitch]
+../Core/Src/main.c:854:5: warning: enumeration value 'AttenteReply' not handled in switch [-Wswitch]
+../Core/Src/main.c:854:5: warning: enumeration value 'calc_xyz' not handled in switch [-Wswitch]
+../Core/Src/main.c:854:5: warning: enumeration value 'phase1' not handled in switch [-Wswitch]
+../Core/Src/main.c:854:5: warning: enumeration value 'phase2' not handled in switch [-Wswitch]
+../Core/Src/main.c:854:5: warning: enumeration value 'phase3' not handled in switch [-Wswitch]
+../Core/Src/main.c:854:5: warning: enumeration value 'DemandeAdd' not handled in switch [-Wswitch]
+../Core/Src/main.c:854:5: warning: enumeration value 'EnvoyerAdd' not handled in switch [-Wswitch]
+../Core/Src/main.c:854:5: warning: enumeration value 'AttDemAdd' not handled in switch [-Wswitch]
+../Core/Src/main.c:854:5: warning: enumeration value 'AttPos' not handled in switch [-Wswitch]
+../Core/Src/main.c:911:33: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+  911 |       HAL_UART_Transmit(&huart1,Dem_TX,8,1000); //1s pour TimeOut au cas où il y a un problème // 8 =4*2
+      |                                 ^~~~~~
+      |                                 |
+      |                                 uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:337,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:700:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  700 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:935:34: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+  935 |        HAL_UART_Transmit(&huart1,Coord_TX,8,1000);
+      |                                  ^~~~~~~~
+      |                                  |
+      |                                  uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:337,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:700:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  700 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:907:5: warning: enumeration value 'AttenteAck' not handled in switch [-Wswitch]
+  907 |     switch (Sous_Etat) {
+      |     ^~~~~~
+../Core/Src/main.c:907:5: warning: enumeration value 'tourne_servo' not handled in switch [-Wswitch]
+../Core/Src/main.c:907:5: warning: enumeration value 'get_Dist' not handled in switch [-Wswitch]
+../Core/Src/main.c:907:5: warning: enumeration value 'calc_xyz' not handled in switch [-Wswitch]
+../Core/Src/main.c:907:5: warning: enumeration value 'phase1' not handled in switch [-Wswitch]
+../Core/Src/main.c:907:5: warning: enumeration value 'phase2' not handled in switch [-Wswitch]
+../Core/Src/main.c:907:5: warning: enumeration value 'phase3' not handled in switch [-Wswitch]
+../Core/Src/main.c:907:5: warning: enumeration value 'EnvoyerAdd' not handled in switch [-Wswitch]
+../Core/Src/main.c:907:5: warning: enumeration value 'AttDemAdd' not handled in switch [-Wswitch]
+../Core/Src/main.c:907:5: warning: enumeration value 'AttPos' not handled in switch [-Wswitch]
+../Core/Src/main.c:966:34: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+  966 |        HAL_UART_Transmit(&huart1,Add_TX,8,1000);
+      |                                  ^~~~~~
+      |                                  |
+      |                                  uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:337,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:700:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  700 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:950:5: warning: enumeration value 'EnvoyerCoord' not handled in switch [-Wswitch]
+  950 |     switch (Sous_Etat) {
+      |     ^~~~~~
+../Core/Src/main.c:950:5: warning: enumeration value 'AttenteReply' not handled in switch [-Wswitch]
+../Core/Src/main.c:950:5: warning: enumeration value 'tourne_servo' not handled in switch [-Wswitch]
+../Core/Src/main.c:950:5: warning: enumeration value 'get_Dist' not handled in switch [-Wswitch]
+../Core/Src/main.c:950:5: warning: enumeration value 'calc_xyz' not handled in switch [-Wswitch]
+../Core/Src/main.c:950:5: warning: enumeration value 'DemandeAdd' not handled in switch [-Wswitch]
+../Core/Src/main.c:950:5: warning: enumeration value 'AttPos' not handled in switch [-Wswitch]
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:1253:32: warning: passing argument 2 of 'HAL_UART_Receive_IT' from incompatible pointer type [-Wincompatible-pointer-types]
+ 1253 |   HAL_UART_Receive_IT(&huart1, Xbee_RX, 8);
+      |                                ^~~~~~~
+      |                                |
+      |                                uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:337,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:703:75: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  703 | HAL_StatusTypeDef HAL_UART_Receive_IT(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size);
+      |                                                                  ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "Robot3_F103RB_origin.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\ROBOT3\New\Rover_5_F103RB_Origin_CubeIDE\Rover_5_F103RB_Origin_CubeIDE\Robot3_F103RB_origin\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Robot3_F103RB_origin.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Robot3_F103RB_origin.elf
+ 
+arm-none-eabi-size   Robot3_F103RB_origin.elf 
+arm-none-eabi-objdump -h -S  Robot3_F103RB_origin.elf  > "Robot3_F103RB_origin.list"
+   text	   data	    bss	    dec	    hex	filename
+  45120	    124	   2284	  47528	   b9a8	Robot3_F103RB_origin.elf
+Finished building: default.size.stdout
+ 
+Finished building: Robot3_F103RB_origin.list
+ 
+
+13:56:24 Build Finished. 0 errors, 69 warnings. (took 960ms)
+
